@@ -1,0 +1,9 @@
+/* without cyrillic fonts
+  @import url(http://fonts.googleapis.com/css?family=Oranienbaum); */
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700,800);
+@import "_theme";
+$sans: Open Sans,Arial, Helvetica, FreeSans, "Liberation Sans", "Nimbus Sans L", sans-serif;
+$serif: Georgia, "Bitstream Charter", "Century Schoolbook L", "Liberation Serif", Times,serif;
+$mono: Inconsolata, Consolas, monospace;
+$heading-font-family: "Open Sans", Helvetica, Arial, sans-serif;

@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block title %}Arkisto | {{ SITENAME }}{% endblock %}
+{% block content %}
+<h2><div class="small box">&nbsp;</div>Arkisto</h2>
+
+{% if GOOGLE_PARTNER_PUB %}
+    {% include '_includes/search.html' %}
+{% endif %}
+
+{% for month, date_month in dates|groupby( 'date.month' )|reverse %}
+<h2><div class="small box">&nbsp;</div>{{ month|monthname }}</h2>
+{% for month, articles in date_month|groupby( 'date.month' )|reverse %}
+<dl>{% for article in articles %}
+    <dd><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a>
+      <span class="archive-date">{{ article.date.strftime('%d') }} {{ article.date.strftime('%B') }}</span>
+    </dd>
+{% endfor %}
+{% endfor %}
+{% endfor %}
+</dl>
+{% endblock %}

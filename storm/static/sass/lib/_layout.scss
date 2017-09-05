@@ -1,0 +1,315 @@
+$img-border: url('../img/dotted-border.png');
+$header-bg: url("../img/header-bg.jpg");
+$noise-img: url("../img/noise.jpg");
+$logo: url("../img/logo.png");
+$box: url("../img/boxi5valk.png");
+$line: url("../img/viiva5.png");
+$leima: url("../img/boxi5valkleima.png");
+$piste-vapaa: url("../img/pistelogot/vapaa.png");
+$piste-bileet: url("../img/pistelogot/bileet.png");
+$piste-kilta: url("../img/pistelogot/kilta.png");
+$piste-master: url("../img/pistelogot/master.png");
+$piste-suunnistus: url("../img/pistelogot/suunnistukset.png");
+$piste-teekkari: url("../img/pistelogot/teekkarikulttuuri.png");
+$piste-tyo: url("../img/pistelogot/tyo.png");
+
+/*
+for use logo.png:
+replace line
+<div class="logo"><a href="{{ SITEURL }}">{{ SITENAME }}</a></div>
+on
+<a href="{{ SITEURL }}"><div class="logo"></div></a>
+in templates/_include/header.html
+*/
+
+* {
+ margin: 0;
+ padding: 0;
+}
+
+html, body {height: 100%; color: $text-color; background-color: $light-gray;}
+
+#outer-wrapper {
+  position: relative;
+  width: 100%;
+  font: normal 14px/1.524 $sans; /* base font */
+  line-height: 140%;
+  min-height: 100%;
+  background-image: $noise-img;
+}
+
+* html #outer-wrapper {
+  height: 100%;
+}
+
+#header-wrapper {
+  color: $white;
+  min-height: 8.375em;
+  vertical-align: middle;
+  text-align: center;
+  border-bottom: 1px solid $border;
+  background: $header-bg;
+/*  .logo {
+    background: $logo no-repeat;
+    margin: 0 auto;
+    width: 305px;
+    max-width: 100%;
+    height: 52px;
+  }*/
+  .small {
+    font-size: 80%;
+  }
+  .logo {
+    a {
+      font: bold 230% $heading-font-family;
+      text-align: center;
+      text-decoration: none;
+      text-transform: uppercase;
+      color: $white;
+      padding-top: 3%;
+    }
+  }
+  .social {
+    font-size:60%;
+    padding:1em 0 0;
+  }
+.nav {
+  margin: 0 auto;
+  max-width: 100%;
+  font-family: $heading-font-family;
+  ul {
+    text-align: center;
+    list-style-type: none;
+  }
+  li {
+    padding: 1em 1em 1em 0;
+    display: inline-block;
+  }
+  a {
+    color: $white;
+    text-decoration: none;
+    font-size: 140%;
+    text-transform: uppercase;
+    &:hover {text-decoration: underline;}
+  }
+}
+}
+
+#main {
+  width: 55%;
+  max-width: 960px;
+  margin: 0 auto; /* centering text */
+  padding-bottom: 6.250em;
+  position: relative;
+}
+
+#footer-wrapper {
+    position: relative;
+    height: 5.000em;
+    margin-top: -5.000em;
+    text-align: center;
+    border-top: 1px solid $border;
+    text-transform: uppercase;
+    background-color: $light-gray;
+    font: {
+      family: $sans;
+    }
+    a {
+      text-decoration: none;
+      color: $gray-mono;
+      &:hover {
+        color: $blue;
+      }
+    }
+    ul, ol, li, p{
+    color: $gray-mono;
+  }
+  p, ul {font-size: 80%; overflow: auto; padding-top: 1em;}
+  li{display: inline; padding: 0; margin: 0 auto;}
+
+}
+
+.footer {
+  width: 55%;
+  max-width: 960px;
+  padding: 0.313em 0;
+  margin: auto; /* centering text */
+
+}
+strong {
+    font-weight: bold;
+}
+
+header > a {
+    position:relative;
+    color: #FFF;
+    text-decoration: none;
+}
+
+header > a > img {
+    position: absolute;
+    margin: 0px;
+}
+
+h1,h2,h3,h4,h5,h6{
+  position: relative; 
+}
+
+h1 {
+    font-size: 2.25em;
+}
+
+h2 {
+    font-size: 1.4em;
+}
+
+h3 {
+    font-size: 1.25em;
+}
+
+h4 {
+    font-size: 1.1em;
+}
+
+
+iframe {
+    height: auto;
+}
+
+#content {
+    position: relative;
+    margin: 2em auto;
+    width: 70%; 
+}
+
+section {
+    position: relative;
+    margin-left: 50px;
+    padding-bottom: 50px;
+    border-bottom: 1px solid #000;
+}
+
+section p {
+    line-height: 1.5em;
+}
+
+section p:after {
+    clear: both;
+}
+
+.left {
+    float: left;
+    margin: 0px 5px 15px 0px;
+}
+
+.right {
+    float: right;
+    margin: 0px 5px 0px 15px;
+}
+
+.clear {
+    clear: both;
+}
+
+.box {
+    position: absolute;
+    top: 0;
+    left: -55px;
+    background-image: $box;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 50px;
+    height: 50px;
+    margin-right: -50px;
+    margin-bottom: -50px;
+}
+
+.box.small {
+    width: 32px;
+    height: 32px;
+    left: -46px;
+}
+
+.box.mini {
+    width: 24px;
+    height: 24px;
+    left: -42px;
+}
+
+.box.leima {
+  width: 24px;
+  height: 24px;
+  left: -42px;
+  background-image: $leima;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+
+.centerimg {
+    //text-align: center;
+    line-height: 2em;
+    margin: 20px;
+}
+.centerimg img {
+    //margin: auto;
+    width: 450px;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.piste {
+  min-height: 42px;
+  font-style: italic;
+  background-repeat: no-repeat;
+  background-size: initial;
+  padding: 0px 0px 0px 50px;
+}
+
+.vapaa {
+  background-image: $piste-vapaa;
+}
+
+.tyo {
+  background-image: $piste-tyo;
+}
+
+.kilta {
+  background-image: $piste-kilta;
+}
+
+.teekkarikulttuuri {
+  background-image: $piste-teekkari;
+}
+
+.bileet {
+  background-image: $piste-bileet;
+}
+
+.suunnistus {
+  background-image: $piste-suunnistus;
+}
+
+.master {
+  min-height: 80px;
+  background-image: $piste-master;
+}
+
+
+#bgline {
+    position: absolute;
+    background-image: $line;
+    background-repeat: repeat-y;
+    background-size: contain;
+    width: 50px;
+    height: 100%;
+    left: -55px;
+}
+
+footer {
+    height: 50px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.95);
+    color: #FFF;
+    line-height: 50px;
+}
