@@ -6,9 +6,9 @@ import datetime
 def month_number_to_name(month):
 	return datetime.date(1900, month, 1).strftime('%B').title()
 
-AUTHOR = u'Fuksiwaari 2015-2016'
+AUTHOR = u'Fuksiwaari 2017-2018'
 SITENAME = u'Waarin blogi'
-SITEURL = 'http://ultsi.github.io/waariblog-pelican'
+SITEURL = 'http://millaalakuijala.github.io/waarinwiikkowiesti'
 
 PATH = 'content'
 
@@ -35,7 +35,7 @@ DEFAULT_PAGINATION = 5
 THEME="storm"
 CSS_FILE = 'screen.css'
 METADATA = 'Tietokillan fuksiwaarin blogi'
-SITESUBTITLE = 'Tietokilta 2015'
+SITESUBTITLE = 'Tietokilta 2017-2018'
 
 RELATIVE_URLS = True
 
