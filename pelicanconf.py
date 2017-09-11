@@ -7,7 +7,7 @@ def month_number_to_name(month):
 	return datetime.date(1900, month, 1).strftime('%B').title()
 
 AUTHOR = u'Fuksiwaari 2017-2018'
-SITENAME = u'Waarin blogi'
+SITENAME = u'Waarin wiikkowiesti'
 SITEURL = 'http://millaalakuijala.github.io/waarinwiikkowiesti'
 
 PATH = 'content'
